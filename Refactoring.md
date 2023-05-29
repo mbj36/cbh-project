@@ -9,3 +9,9 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+1. Moved to latest ES6 ecosystem instead of using commonJS module
+2. Used ECMAScript modules - import to include modules.
+3. Converted TRIVIAL_PARTITION_KEY to default integer as 0
+4. Simplified the If/Else condition to check event and if event contains partition key else stringify the event and generate candidate from hash.
+5. Returned TRIVIAL_PARTITION_KEY if event is not provided at the top of the function
